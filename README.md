@@ -12,11 +12,10 @@ close all
 clc
 rng(1)
 addpath(genpath(pwd));
-%% Part1 - A case about using MPUAV methods
 
+%% Part1 - A case about using MPUAV methods
 seed = 1; % The random seed must be an integer in the interval [1,30]
 problem = MPUAV1(seed);
-
 rng(seed)
 popsize = 100;
 disp('The decision variables dim of MPUAV problem')
@@ -38,8 +37,9 @@ Objs = problem.CalObj(X0);
 
 disp('The MPHV metric of the population')
 MPHV(Objs,problem)
-%% Attention!
 
+
+%% Attention!
 % (1) Calls to CalObj that exceed the number of evaluations MaxFE will trigger an error.
 % An example of this error
 
@@ -54,8 +54,8 @@ MPHV(Objs,problem)
 
 
 % (3) When the quality of the solution set is very poor, MPHV returns a value of 0.
-%% Part2 - A case about using MPMOP methods
 
+%% Part2 - A case about using MPMOP methods
 problem = MPMOP11();
 popsize = 100;
 disp('The decision variables dim of MPMOP problem')
