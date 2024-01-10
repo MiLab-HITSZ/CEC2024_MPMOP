@@ -1,6 +1,7 @@
 # MPMOP_CEC2024
 This project presents the source code of the competition on multipary multiobjective optimization.
 
+```MATLAB
 %% This script provides examples of how to use MPUAV benchmark and MPMOP benchmark.
 
 clear 
@@ -91,7 +92,8 @@ for dm = 1:problem.DM
     end
 end
 
+
 disp('The MPIGD metric of the population')
 MPIGD(Objs,problem)
-
+```
 
