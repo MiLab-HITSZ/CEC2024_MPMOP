@@ -1,6 +1,6 @@
 # MPMOP_CEC2024
 This project presents the source code of the competition on multipary multiobjective optimization for CEC2024.
-* In demo0, the use of the already encapsulated benchmarks MPMOP1-MPMOP11 with MPUAV1-MPUAV2 is shown. 
+* In demo0, the use of the already encapsulated benchmarks MPMOP1-MPMOP11 and MPUAV1-MPUAV6 is shown. 
 * In demo1, we provide an example of using OptMPNDS to optimize MPMOPs. 
 * In demo2, we provide an example of using OptMPNDS to optimize the MPUAV problems (BPMO-UAVPP).
 
