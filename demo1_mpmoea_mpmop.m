@@ -8,7 +8,7 @@ rng(1)
 addpath(genpath(pwd));
 %% OptMPNDS
 popsize = 100;
-problem = MPMOP8();
+problem = MPMOP8(30);
 X0 = problem.lower+(problem.upper-problem.lower).*rand(popsize,problem.D);
 Y0 = problem.CalObj(X0);
 P.getX = @(population) population(:,1:problem.D);

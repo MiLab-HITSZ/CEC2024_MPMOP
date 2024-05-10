@@ -16,15 +16,15 @@ classdef MPMOP8< handle
 
     methods
         %% Initialization
-        function obj = MPMOP8()
+        function obj = MPMOP8(D)
             obj.calcount=0;
             obj.M = 6;
-            obj.D = 20;
-            obj.maxFE=1000*obj.D*obj.M;
+            obj.D = D;
+            obj.DM=3;
+            obj.maxFE=1000*obj.D*obj.DM;
             obj.lower    =ones(1,obj.D).*(-1);
             obj.upper    = ones(1,obj.D);
             obj.lower(1)=0;
-            obj.DM=3;
             obj.encoding = 'real';
         end
         %% Calculate objective values for each party

@@ -16,15 +16,15 @@ classdef MPMOP3< handle
 
     methods
         %% Initialization
-        function obj = MPMOP3()
+        function obj = MPMOP3(D)
             obj.calcount=0;
             obj.M = 4;
-            obj.D = 20;
-            obj.maxFE=1000*obj.D*obj.M;
+            obj.D = D;
+            obj.DM=2;
+            obj.maxFE=1000*obj.D*obj.DM;
             obj.lower    =ones(1,obj.D).*(-1);
             obj.upper    = ones(1,obj.D);
             obj.lower(1)=0;
-            obj.DM=2;
             obj.encoding = 'real';
         end
         %% Calculate objective values for each party

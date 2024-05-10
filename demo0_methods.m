@@ -48,8 +48,8 @@ MPHV(Objs,problem)
 
 % (3) When the quality of the solution set is very poor, MPHV returns a value of 0.
 %% Part2 - A case about using MPMOP methods
-
-problem = MPMOP11();
+% MPMOP(D)
+problem = MPMOP11(30);
 popsize = 100;
 disp('The decision variables dim of MPMOP problem')
 disp(problem.D)

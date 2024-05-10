@@ -18,14 +18,14 @@ classdef MPMOP10< handle
 
     methods
         %% Initialization
-        function obj = MPMOP10()
+        function obj = MPMOP10(D)
             obj.calcount=0;
             obj.M = 9;
-            obj.D = 20;
-            obj.maxFE=1000*obj.D*obj.M;
+            obj.D = D;
+            obj.DM=3;
+            obj.maxFE=1000*obj.D*obj.DM;
             obj.lower    = zeros(1,obj.D);
             obj.upper    = ones(1,obj.D);
-            obj.DM=3;
             obj.encoding = 'real';
         end
         %% Calculate objective values for each party
