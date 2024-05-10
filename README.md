@@ -43,8 +43,8 @@ MPHV(Objs,problem)
 % (1) Calls to CalObj that exceed the number of evaluations MaxFE will trigger an error.
 % An example of this error
 
-% MaxFE = 10;
-% problem = MPMOP11(MaxFE);
+% D= 10;
+% problem = MPMOP11(D);
 % for i = 1:10000000000
 %    Objs = problem.CalObj(X0);
 % end
@@ -55,8 +55,8 @@ MPHV(Objs,problem)
 
 % (3) When the quality of the solution set is very poor, MPHV returns a value of 0.
 
-%% Part2 - A case about using MPMOP methods
-problem = MPMOP11();
+%% Part2 - A case about using MPMOP11(dim=30) methods
+problem = MPMOP11(30);
 popsize = 100;
 disp('The decision variables dim of MPMOP problem')
 disp(problem.D)
